@@ -1,1 +1,1 @@
-# js-advanced-git
+# JS-ADVANCED
