@@ -1,17 +1,19 @@
 function solve(input) {
-    let arr = [input[0]];
+    let result = input.reduce((a, x, i, arr) => {
+        if (i !== 0) {
+            if (x >= arr[i-1]) {
+                a.push(x);
+            }
 
-    for(let i = 1; i < input.length; i++) {
-        let current = input[i];
-        let last = input[i - 1];
-
-        if(current >= last) {
-            arr.push(current);
+        } else {
+            a.push(x);
         }
 
-    }
+        return a;
 
-    return arr;
+    }, []);
+
+    return result;
 }
 
 solve([1, 
